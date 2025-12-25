@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聖誕抽獎轉盤</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    
+    <div class="container">
+        <h1>🎄 聖誕抽獎轉盤 🎁</h1>
+        <h2> 你只有一次機會 </h2>
+        
+        <div class="wheel-container">
+            <div class="arrow">▼</div>
+            <canvas id="wheel" width="400" height="400"></canvas>
+        </div>
+        
+        <button id="spinBtn" class="spin-btn">開始抽獎！</button>
+        
+        <div id="result" class="result"></div>
+        
+        <button class="back-btn" onclick="window.location.href='index.html'">← 返回首頁</button>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #1a472a 100%);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 60px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #c41e3a;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wheel-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.arrow {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    font-size: 3rem;
+    color: #c41e3a;
+    z-index: 100;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+#wheel {
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.spin-btn {
+    background: linear-gradient(135deg, #c41e3a, #e63946);
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+}
+
+.spin-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+}
+
+.spin-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.result {
+    font-size: 1.8rem;
+    color: #228b22;
+    font-weight: bold;
+    margin: 20px 0;
+    min-height: 40px;
+    animation: fadeIn 0.5s;
+}
+
+.back-btn {
+    background: #228b22;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.back-btn:hover {
+    background: #1a6b1a;
+    transform: translateY(-2px);
+}
+
+/* 下雪效果 */
+.snow {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+.snow:nth-child(1) {
+    left: 10%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.snow:nth-child(2) {
+    left: 30%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.snow:nth-child(3) {
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+.snow:nth-child(4) {
+    left: 70%;
+    width: 9px;
+    height: 9px;
+    animation-duration: 11s;
+    animation-delay: 1s;
+}
+
+.snow:nth-child(5) {
+    left: 90%;
+    width: 11px;
+    height: 11px;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
